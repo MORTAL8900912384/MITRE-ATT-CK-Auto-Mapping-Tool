@@ -1,0 +1,122 @@
+[
+  {
+    "id": "V01",
+    "source": "CVE-2021-44228 (Log4Shell)",
+    "text": "A Java application logs a specially crafted string containing a JNDI lookup submitted via an HTTP request header. The LDAP-referenced malicious class is fetched and executed on the server, giving the attacker unauthenticated remote code execution.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V02",
+    "source": "CVE-2017-0144 (EternalBlue, used in WannaCry)",
+    "text": "An attacker sends crafted SMBv1 packets to a Windows file-sharing service, exploiting a buffer overflow to gain remote code execution and worm to other machines on the network, which are then encrypted for ransom.",
+    "correct_techniques": ["T1210", "T1486"]
+  },
+  {
+    "id": "V03",
+    "source": "CVE-2019-0708 (BlueKeep)",
+    "text": "An unauthenticated attacker sends specially crafted requests to a Windows Remote Desktop Protocol service, triggering a use-after-free vulnerability to achieve remote code execution with no user interaction required.",
+    "correct_techniques": ["T1210"]
+  },
+  {
+    "id": "V04",
+    "source": "CVE-2020-1472 (Zerologon)",
+    "text": "An attacker already on the internal network exploits a cryptographic flaw in the Netlogon Remote Protocol to reset the domain controller's computer account password and impersonate it, gaining full domain administrator privileges.",
+    "correct_techniques": ["T1068"]
+  },
+  {
+    "id": "V05",
+    "source": "CVE-2021-34527 (PrintNightmare)",
+    "text": "A low-privileged local user abuses the Windows Print Spooler service to load an arbitrary DLL with SYSTEM privileges, escalating from a standard account to full administrative control of the host.",
+    "correct_techniques": ["T1068"]
+  },
+  {
+    "id": "V06",
+    "source": "CVE-2014-6271 (Shellshock)",
+    "text": "An attacker sends an HTTP request with a malicious environment variable value to a CGI script, exploiting a Bash parsing flaw to execute arbitrary shell commands on the web server.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V07",
+    "source": "CVE-2017-5638 (Apache Struts, 2017 Equifax breach)",
+    "text": "An attacker submits a crafted Content-Type header to a Struts2-based web application, triggering an OGNL injection that executes arbitrary operating system commands on the underlying server.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V08",
+    "source": "CVE-2021-26855 (ProxyLogon)",
+    "text": "An unauthenticated attacker sends a crafted HTTP request to an on-premises Microsoft Exchange server, exploiting a server-side request forgery flaw to authenticate as the Exchange server itself and access mailbox data.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V09",
+    "source": "CVE-2023-34362 (MOVEit Transfer, Cl0p campaign)",
+    "text": "Attackers exploited a SQL injection vulnerability in a public-facing managed file transfer web application to gain unauthorized database access and plant web shells used for mass data exfiltration.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V10",
+    "source": "CVE-2022-30190 (Follina)",
+    "text": "A victim opens a malicious Word document; when the document is previewed, it invokes the Microsoft Support Diagnostic Tool through a remote template to execute a PowerShell command without macros or clicking 'Enable Content'.",
+    "correct_techniques": ["T1203"]
+  },
+  {
+    "id": "V11",
+    "source": "CVE-2017-11882 (Office Equation Editor)",
+    "text": "A phishing email attachment is a Word document embedding a malformed OLE object that exploits a memory corruption bug in the legacy Equation Editor component, executing attacker code as soon as the file is opened.",
+    "correct_techniques": ["T1203"]
+  },
+  {
+    "id": "V12",
+    "source": "CVE-2023-23397 (Outlook NTLM leak)",
+    "text": "An attacker sends a specially crafted email containing an extended MAPI property with a UNC path. Outlook automatically connects to the attacker's SMB server upon receipt, leaking the victim's NTLM hash without any user interaction.",
+    "correct_techniques": ["T1187"]
+  },
+  {
+    "id": "V13",
+    "source": "CVE-2018-13379 (Fortinet SSL VPN path traversal)",
+    "text": "An unauthenticated attacker sends a crafted HTTP resource request to a Fortinet SSL VPN web portal, exploiting a path traversal flaw to read a session file and obtain plaintext VPN credentials.",
+    "correct_techniques": ["T1190", "T1552.001"]
+  },
+  {
+    "id": "V14",
+    "source": "CVE-2020-0601 (CurveBall)",
+    "text": "An attacker forges a certificate for a trusted software publisher by exploiting a flaw in Windows' elliptic-curve cryptography validation, allowing malicious code to appear as though it were signed by a legitimate, trusted source.",
+    "correct_techniques": ["T1553.002"]
+  },
+  {
+    "id": "V15",
+    "source": "Incident behavior: LSASS credential dumping (Mimikatz)",
+    "text": "An adversary with local administrator rights on a compromised host runs a tool to dump the memory of the LSASS process, extracting plaintext passwords, password hashes, and Kerberos tickets for cached user sessions.",
+    "correct_techniques": ["T1003.001"]
+  },
+  {
+    "id": "V16",
+    "source": "Incident behavior: PowerShell in-memory second stage",
+    "text": "The attacker executes a base64-encoded PowerShell command that downloads a second-stage payload from a remote server and runs it entirely in memory to avoid writing files to disk.",
+    "correct_techniques": ["T1059.001"]
+  },
+  {
+    "id": "V17",
+    "source": "Incident behavior: macro-laden phishing attachment",
+    "text": "Employees received an email with a password-protected ZIP attachment containing a macro-enabled Excel spreadsheet. Opening it and enabling macros silently downloaded and installed a remote access trojan.",
+    "correct_techniques": ["T1566.001"]
+  },
+  {
+    "id": "V18",
+    "source": "Incident behavior: scheduled task persistence",
+    "text": "After the initial compromise, the attacker created a scheduled task configured to run a malicious script every time the machine started, ensuring their access survived reboots.",
+    "correct_techniques": ["T1053.005"]
+  },
+  {
+    "id": "V19",
+    "source": "Incident behavior: Cobalt Strike beaconing",
+    "text": "The implant beacons out to its command-and-control server roughly every 60 seconds over HTTPS on port 443, blending in with normal web traffic to receive tasking and exfiltrate data.",
+    "correct_techniques": ["T1071.001"]
+  },
+  {
+    "id": "V20",
+    "source": "Incident behavior: Kerberoasting",
+    "text": "An attacker with a valid domain user account requests Kerberos service tickets for accounts with registered service principal names, then extracts the tickets to crack the service account passwords offline.",
+    "correct_techniques": ["T1558.003"]
+  }
+]

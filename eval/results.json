@@ -1,0 +1,1059 @@
+{
+  "n_examples": 20,
+  "top1_accuracy": 0.3,
+  "top5_accuracy": 0.85,
+  "results": [
+    {
+      "id": "V01",
+      "source": "CVE-2021-44228 (Log4Shell)",
+      "correct_techniques": [
+        "T1190"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1027.001",
+          "name": "Binary Padding",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.5190922021865845
+        },
+        {
+          "technique_id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.5107854604721069
+        },
+        {
+          "technique_id": "T1622",
+          "name": "Debugger Evasion",
+          "tactics": [
+            "discovery",
+            "stealth"
+          ],
+          "score": 0.49219292402267456
+        },
+        {
+          "technique_id": "T1216.001",
+          "name": "PubPrn",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.4883646070957184
+        },
+        {
+          "technique_id": "T1040",
+          "name": "Network Sniffing",
+          "tactics": [
+            "credential-access",
+            "discovery"
+          ],
+          "score": 0.4799862504005432
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V02",
+      "source": "CVE-2017-0144 (EternalBlue, used in WannaCry)",
+      "correct_techniques": [
+        "T1210",
+        "T1486"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1689",
+          "name": "Downgrade Attack",
+          "tactics": [
+            "defense-impairment"
+          ],
+          "score": 0.703768789768219
+        },
+        {
+          "technique_id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "lateral-movement"
+          ],
+          "score": 0.6751768589019775
+        },
+        {
+          "technique_id": "T1021.002",
+          "name": "SMB/Windows Admin Shares",
+          "tactics": [
+            "lateral-movement"
+          ],
+          "score": 0.6509784460067749
+        },
+        {
+          "technique_id": "T1557.001",
+          "name": "Name Resolution Poisoning and SMB Relay",
+          "tactics": [
+            "collection",
+            "credential-access"
+          ],
+          "score": 0.6267938613891602
+        },
+        {
+          "technique_id": "T1486",
+          "name": "Data Encrypted for Impact",
+          "tactics": [
+            "impact"
+          ],
+          "score": 0.6225544810295105
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V03",
+      "source": "CVE-2019-0708 (BlueKeep)",
+      "correct_techniques": [
+        "T1210"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "lateral-movement"
+          ],
+          "score": 0.7064952254295349
+        },
+        {
+          "technique_id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.626192569732666
+        },
+        {
+          "technique_id": "T1021.001",
+          "name": "Remote Desktop Protocol",
+          "tactics": [
+            "lateral-movement"
+          ],
+          "score": 0.6233548521995544
+        },
+        {
+          "technique_id": "T1563.002",
+          "name": "RDP Hijacking",
+          "tactics": [
+            "lateral-movement"
+          ],
+          "score": 0.6200816631317139
+        },
+        {
+          "technique_id": "T1212",
+          "name": "Exploitation for Credential Access",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.5895907282829285
+        }
+      ],
+      "top1_hit": true,
+      "top5_hit": true
+    },
+    {
+      "id": "V04",
+      "source": "CVE-2020-1472 (Zerologon)",
+      "correct_techniques": [
+        "T1068"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1556.001",
+          "name": "Domain Controller Authentication",
+          "tactics": [
+            "credential-access",
+            "defense-impairment",
+            "persistence"
+          ],
+          "score": 0.6539272665977478
+        },
+        {
+          "technique_id": "T1556",
+          "name": "Modify Authentication Process",
+          "tactics": [
+            "credential-access",
+            "defense-impairment",
+            "persistence"
+          ],
+          "score": 0.6184136271476746
+        },
+        {
+          "technique_id": "T1078",
+          "name": "Valid Accounts",
+          "tactics": [
+            "initial-access",
+            "persistence",
+            "privilege-escalation",
+            "stealth"
+          ],
+          "score": 0.581152617931366
+        },
+        {
+          "technique_id": "T1210",
+          "name": "Exploitation of Remote Services",
+          "tactics": [
+            "lateral-movement"
+          ],
+          "score": 0.5774296522140503
+        },
+        {
+          "technique_id": "T1558.004",
+          "name": "AS-REP Roasting",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.564052402973175
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": false
+    },
+    {
+      "id": "V05",
+      "source": "CVE-2021-34527 (PrintNightmare)",
+      "correct_techniques": [
+        "T1068"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1547.012",
+          "name": "Print Processors",
+          "tactics": [
+            "persistence",
+            "privilege-escalation"
+          ],
+          "score": 0.7495406866073608
+        },
+        {
+          "technique_id": "T1548.002",
+          "name": "Bypass User Account Control",
+          "tactics": [
+            "privilege-escalation"
+          ],
+          "score": 0.6495110988616943
+        },
+        {
+          "technique_id": "T1574.001",
+          "name": "DLL",
+          "tactics": [
+            "execution",
+            "stealth"
+          ],
+          "score": 0.6190897226333618
+        },
+        {
+          "technique_id": "T1574.012",
+          "name": "COR_PROFILER",
+          "tactics": [
+            "execution",
+            "stealth"
+          ],
+          "score": 0.5688552856445312
+        },
+        {
+          "technique_id": "T1547.010",
+          "name": "Port Monitors",
+          "tactics": [
+            "persistence",
+            "privilege-escalation"
+          ],
+          "score": 0.5652704238891602
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": false
+    },
+    {
+      "id": "V06",
+      "source": "CVE-2014-6271 (Shellshock)",
+      "correct_techniques": [
+        "T1190"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1505.003",
+          "name": "Web Shell",
+          "tactics": [
+            "persistence"
+          ],
+          "score": 0.6162222623825073
+        },
+        {
+          "technique_id": "T1071.001",
+          "name": "Web Protocols",
+          "tactics": [
+            "command-and-control"
+          ],
+          "score": 0.604040265083313
+        },
+        {
+          "technique_id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.6001885533332825
+        },
+        {
+          "technique_id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.5877399444580078
+        },
+        {
+          "technique_id": "T1059",
+          "name": "Command and Scripting Interpreter",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.5868880152702332
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V07",
+      "source": "CVE-2017-5638 (Apache Struts, 2017 Equifax breach)",
+      "correct_techniques": [
+        "T1190"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.5912683010101318
+        },
+        {
+          "technique_id": "T1221",
+          "name": "Template Injection",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.5663461685180664
+        },
+        {
+          "technique_id": "T1659",
+          "name": "Content Injection",
+          "tactics": [
+            "command-and-control",
+            "initial-access"
+          ],
+          "score": 0.5654617547988892
+        },
+        {
+          "technique_id": "T1505.004",
+          "name": "IIS Components",
+          "tactics": [
+            "persistence"
+          ],
+          "score": 0.5640491247177124
+        },
+        {
+          "technique_id": "T1216",
+          "name": "System Script Proxy Execution",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.556178867816925
+        }
+      ],
+      "top1_hit": true,
+      "top5_hit": true
+    },
+    {
+      "id": "V08",
+      "source": "CVE-2021-26855 (ProxyLogon)",
+      "correct_techniques": [
+        "T1190"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1114.002",
+          "name": "Remote Email Collection",
+          "tactics": [
+            "collection"
+          ],
+          "score": 0.6131273508071899
+        },
+        {
+          "technique_id": "T1684.002",
+          "name": "Email Spoofing",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.5844764709472656
+        },
+        {
+          "technique_id": "T1505.004",
+          "name": "IIS Components",
+          "tactics": [
+            "persistence"
+          ],
+          "score": 0.5681825876235962
+        },
+        {
+          "technique_id": "T1505.002",
+          "name": "Transport Agent",
+          "tactics": [
+            "persistence"
+          ],
+          "score": 0.5472593903541565
+        },
+        {
+          "technique_id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.5348809957504272
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V09",
+      "source": "CVE-2023-34362 (MOVEit Transfer, Cl0p campaign)",
+      "correct_techniques": [
+        "T1190"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.6976798176765442
+        },
+        {
+          "technique_id": "T1567",
+          "name": "Exfiltration Over Web Service",
+          "tactics": [
+            "exfiltration"
+          ],
+          "score": 0.6119217276573181
+        },
+        {
+          "technique_id": "T1588.002",
+          "name": "Tool",
+          "tactics": [
+            "resource-development"
+          ],
+          "score": 0.5724453926086426
+        },
+        {
+          "technique_id": "T1020",
+          "name": "Automated Exfiltration",
+          "tactics": [
+            "exfiltration"
+          ],
+          "score": 0.5622010827064514
+        },
+        {
+          "technique_id": "T1657",
+          "name": "Financial Theft",
+          "tactics": [
+            "impact"
+          ],
+          "score": 0.5409622192382812
+        }
+      ],
+      "top1_hit": true,
+      "top5_hit": true
+    },
+    {
+      "id": "V10",
+      "source": "CVE-2022-30190 (Follina)",
+      "correct_techniques": [
+        "T1203"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1204.002",
+          "name": "Malicious File",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.6631696224212646
+        },
+        {
+          "technique_id": "T1221",
+          "name": "Template Injection",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.6005812287330627
+        },
+        {
+          "technique_id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.583966076374054
+        },
+        {
+          "technique_id": "T1027.003",
+          "name": "Steganography",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.577276349067688
+        },
+        {
+          "technique_id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.5626906752586365
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V11",
+      "source": "CVE-2017-11882 (Office Equation Editor)",
+      "correct_techniques": [
+        "T1203"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1566",
+          "name": "Phishing",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.6897302269935608
+        },
+        {
+          "technique_id": "T1566.001",
+          "name": "Spearphishing Attachment",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.6883051991462708
+        },
+        {
+          "technique_id": "T1598.003",
+          "name": "Spearphishing Link",
+          "tactics": [
+            "reconnaissance"
+          ],
+          "score": 0.6131559610366821
+        },
+        {
+          "technique_id": "T1534",
+          "name": "Internal Spearphishing",
+          "tactics": [
+            "lateral-movement"
+          ],
+          "score": 0.605543851852417
+        },
+        {
+          "technique_id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.6010028719902039
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V12",
+      "source": "CVE-2023-23397 (Outlook NTLM leak)",
+      "correct_techniques": [
+        "T1187"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1557.001",
+          "name": "Name Resolution Poisoning and SMB Relay",
+          "tactics": [
+            "collection",
+            "credential-access"
+          ],
+          "score": 0.5786045789718628
+        },
+        {
+          "technique_id": "T1098.002",
+          "name": "Additional Email Delegate Permissions",
+          "tactics": [
+            "persistence",
+            "privilege-escalation"
+          ],
+          "score": 0.5627902746200562
+        },
+        {
+          "technique_id": "T1505.002",
+          "name": "Transport Agent",
+          "tactics": [
+            "persistence"
+          ],
+          "score": 0.5511270761489868
+        },
+        {
+          "technique_id": "T1114.002",
+          "name": "Remote Email Collection",
+          "tactics": [
+            "collection"
+          ],
+          "score": 0.5385724306106567
+        },
+        {
+          "technique_id": "T1187",
+          "name": "Forced Authentication",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.5370038151741028
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V13",
+      "source": "CVE-2018-13379 (Fortinet SSL VPN path traversal)",
+      "correct_techniques": [
+        "T1190",
+        "T1552.001"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.5529001951217651
+        },
+        {
+          "technique_id": "T1133",
+          "name": "External Remote Services",
+          "tactics": [
+            "initial-access",
+            "persistence"
+          ],
+          "score": 0.5379042029380798
+        },
+        {
+          "technique_id": "T1554",
+          "name": "Compromise Host Software Binary",
+          "tactics": [
+            "persistence"
+          ],
+          "score": 0.4958321452140808
+        },
+        {
+          "technique_id": "T1056.003",
+          "name": "Web Portal Capture",
+          "tactics": [
+            "collection",
+            "credential-access"
+          ],
+          "score": 0.4950564503669739
+        },
+        {
+          "technique_id": "T1598.003",
+          "name": "Spearphishing Link",
+          "tactics": [
+            "reconnaissance"
+          ],
+          "score": 0.4947575330734253
+        }
+      ],
+      "top1_hit": true,
+      "top5_hit": true
+    },
+    {
+      "id": "V14",
+      "source": "CVE-2020-0601 (CurveBall)",
+      "correct_techniques": [
+        "T1553.002"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1553.002",
+          "name": "Code Signing",
+          "tactics": [
+            "defense-impairment"
+          ],
+          "score": 0.6022948026657104
+        },
+        {
+          "technique_id": "T1552.004",
+          "name": "Private Keys",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.5973796844482422
+        },
+        {
+          "technique_id": "T1587.002",
+          "name": "Code Signing Certificates",
+          "tactics": [
+            "resource-development"
+          ],
+          "score": 0.592939555644989
+        },
+        {
+          "technique_id": "T1588.003",
+          "name": "Code Signing Certificates",
+          "tactics": [
+            "resource-development"
+          ],
+          "score": 0.5912106037139893
+        },
+        {
+          "technique_id": "T1127",
+          "name": "Trusted Developer Utilities Proxy Execution",
+          "tactics": [
+            "execution",
+            "stealth"
+          ],
+          "score": 0.5898556709289551
+        }
+      ],
+      "top1_hit": true,
+      "top5_hit": true
+    },
+    {
+      "id": "V15",
+      "source": "Incident behavior: LSASS credential dumping (Mimikatz)",
+      "correct_techniques": [
+        "T1003.001"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1003.001",
+          "name": "LSASS Memory",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.723275899887085
+        },
+        {
+          "technique_id": "T1003",
+          "name": "OS Credential Dumping",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.6616401076316833
+        },
+        {
+          "technique_id": "T1003.004",
+          "name": "LSA Secrets",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.6389334201812744
+        },
+        {
+          "technique_id": "T1003.005",
+          "name": "Cached Domain Credentials",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.6380681991577148
+        },
+        {
+          "technique_id": "T1547.008",
+          "name": "LSASS Driver",
+          "tactics": [
+            "persistence",
+            "privilege-escalation"
+          ],
+          "score": 0.6069879531860352
+        }
+      ],
+      "top1_hit": true,
+      "top5_hit": true
+    },
+    {
+      "id": "V16",
+      "source": "Incident behavior: PowerShell in-memory second stage",
+      "correct_techniques": [
+        "T1059.001"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1027.010",
+          "name": "Command Obfuscation",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.7348345518112183
+        },
+        {
+          "technique_id": "T1059.001",
+          "name": "PowerShell",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.6540337204933167
+        },
+        {
+          "technique_id": "T1027.003",
+          "name": "Steganography",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.6518025398254395
+        },
+        {
+          "technique_id": "T1140",
+          "name": "Deobfuscate/Decode Files or Information",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.6260043978691101
+        },
+        {
+          "technique_id": "T1053.005",
+          "name": "Scheduled Task",
+          "tactics": [
+            "execution",
+            "persistence",
+            "privilege-escalation"
+          ],
+          "score": 0.5868920683860779
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V17",
+      "source": "Incident behavior: macro-laden phishing attachment",
+      "correct_techniques": [
+        "T1566.001"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1204.002",
+          "name": "Malicious File",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.6279083490371704
+        },
+        {
+          "technique_id": "T1203",
+          "name": "Exploitation for Client Execution",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.5973365902900696
+        },
+        {
+          "technique_id": "T1566.001",
+          "name": "Spearphishing Attachment",
+          "tactics": [
+            "initial-access"
+          ],
+          "score": 0.5942835211753845
+        },
+        {
+          "technique_id": "T1685",
+          "name": "Disable or Modify Tools",
+          "tactics": [
+            "defense-impairment"
+          ],
+          "score": 0.5752765536308289
+        },
+        {
+          "technique_id": "T1559.001",
+          "name": "Component Object Model",
+          "tactics": [
+            "execution"
+          ],
+          "score": 0.5587887763977051
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V18",
+      "source": "Incident behavior: scheduled task persistence",
+      "correct_techniques": [
+        "T1053.005"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1688",
+          "name": "Safe Mode Boot",
+          "tactics": [
+            "defense-impairment"
+          ],
+          "score": 0.583193302154541
+        },
+        {
+          "technique_id": "T1653",
+          "name": "Power Settings",
+          "tactics": [
+            "persistence"
+          ],
+          "score": 0.578367292881012
+        },
+        {
+          "technique_id": "T1037",
+          "name": "Boot or Logon Initialization Scripts",
+          "tactics": [
+            "persistence",
+            "privilege-escalation"
+          ],
+          "score": 0.5521275997161865
+        },
+        {
+          "technique_id": "T1036.004",
+          "name": "Masquerade Task or Service",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.5448406934738159
+        },
+        {
+          "technique_id": "T1037.004",
+          "name": "RC Scripts",
+          "tactics": [
+            "persistence",
+            "privilege-escalation"
+          ],
+          "score": 0.5425069332122803
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": false
+    },
+    {
+      "id": "V19",
+      "source": "Incident behavior: Cobalt Strike beaconing",
+      "correct_techniques": [
+        "T1071.001"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1678",
+          "name": "Delay Execution",
+          "tactics": [
+            "stealth"
+          ],
+          "score": 0.4525146484375
+        },
+        {
+          "technique_id": "T1197",
+          "name": "BITS Jobs",
+          "tactics": [
+            "execution",
+            "persistence",
+            "stealth"
+          ],
+          "score": 0.443002849817276
+        },
+        {
+          "technique_id": "T1029",
+          "name": "Scheduled Transfer",
+          "tactics": [
+            "exfiltration"
+          ],
+          "score": 0.44133052229881287
+        },
+        {
+          "technique_id": "T1071.001",
+          "name": "Web Protocols",
+          "tactics": [
+            "command-and-control"
+          ],
+          "score": 0.43644988536834717
+        },
+        {
+          "technique_id": "T1573",
+          "name": "Encrypted Channel",
+          "tactics": [
+            "command-and-control"
+          ],
+          "score": 0.43605858087539673
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    },
+    {
+      "id": "V20",
+      "source": "Incident behavior: Kerberoasting",
+      "correct_techniques": [
+        "T1558.003"
+      ],
+      "predicted": [
+        {
+          "technique_id": "T1558",
+          "name": "Steal or Forge Kerberos Tickets",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.7029349207878113
+        },
+        {
+          "technique_id": "T1558.003",
+          "name": "Kerberoasting",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.6814703345298767
+        },
+        {
+          "technique_id": "T1558.004",
+          "name": "AS-REP Roasting",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.672516942024231
+        },
+        {
+          "technique_id": "T1212",
+          "name": "Exploitation for Credential Access",
+          "tactics": [
+            "credential-access"
+          ],
+          "score": 0.6493009328842163
+        },
+        {
+          "technique_id": "T1078.002",
+          "name": "Domain Accounts",
+          "tactics": [
+            "initial-access",
+            "persistence",
+            "privilege-escalation",
+            "stealth"
+          ],
+          "score": 0.5858584642410278
+        }
+      ],
+      "top1_hit": false,
+      "top5_hit": true
+    }
+  ]
+}
