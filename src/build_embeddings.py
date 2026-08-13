@@ -26,7 +26,13 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 TECHNIQUES_JSON = os.path.join(DATA_DIR, "techniques.json")
 EMBEDDINGS_OUT = os.path.join(DATA_DIR, "embeddings.npy")
 IDS_OUT = os.path.join(DATA_DIR, "technique_ids.json")
+CHUNK_TEXTS_OUT = os.path.join(DATA_DIR, "chunk_texts.json")
 
+# Tried swapping in larger general-purpose models (all-mpnet-base-v2,
+# multi-qa-mpnet-base-dot-v1) expecting better accuracy; on this corpus
+# neither beat all-MiniLM-L6-v2's top-1 (37.5% vs 30.0% / 32.5%) despite
+# being 6-7x slower to build, so the small model stays. See README for the
+# comparison table.
 MODEL_NAME = "all-MiniLM-L6-v2"
 
 CITATION_RE = re.compile(r"\(Citation:[^)]*\)")
@@ -130,9 +136,15 @@ def build_embeddings(force: bool = False) -> None:
     np.save(EMBEDDINGS_OUT, embeddings)
     with open(IDS_OUT, "w", encoding="utf-8") as f:
         json.dump(ids, f, indent=2)
+    # Chunk texts are saved alongside so query-time BM25 lexical scoring and
+    # cross-encoder reranking can reuse the exact same chunks without having
+    # to recompute (and risk drifting from) the embeddings' row order.
+    with open(CHUNK_TEXTS_OUT, "w", encoding="utf-8") as f:
+        json.dump(texts, f, indent=2, ensure_ascii=False)
 
     print(f"Saved embeddings {embeddings.shape} to {EMBEDDINGS_OUT}")
     print(f"Saved {len(ids)} chunk technique-IDs to {IDS_OUT}")
+    print(f"Saved {len(texts)} chunk texts to {CHUNK_TEXTS_OUT}")
 
 
 def main():

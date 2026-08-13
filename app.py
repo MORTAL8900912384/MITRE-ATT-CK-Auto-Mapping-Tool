@@ -27,12 +27,12 @@ st.caption(
 @st.cache_resource(show_spinner="Loading model and technique index...")
 def load_resources():
     model = get_model()
-    embeddings, ids, techniques = load_index()
-    return model, embeddings, ids, techniques
+    embeddings, ids, techniques, chunk_texts, bm25 = load_index()
+    return model, embeddings, ids, techniques, chunk_texts, bm25
 
 
 try:
-    model, embeddings, ids, techniques = load_resources()
+    model, embeddings, ids, techniques, chunk_texts, bm25 = load_resources()
 except FileNotFoundError as e:
     st.error(
         f"{e}\n\nRun `python src/fetch_attack_data.py` then "
@@ -51,7 +51,14 @@ top_k = st.slider("Number of matches", min_value=1, max_value=10, value=5)
 if st.button("Map to ATT&CK techniques", type="primary") and text.strip():
     with st.spinner("Embedding and ranking..."):
         results = top_matches(
-            text, top_k=top_k, model=model, embeddings=embeddings, ids=ids, techniques=techniques
+            text,
+            top_k=top_k,
+            model=model,
+            embeddings=embeddings,
+            ids=ids,
+            techniques=techniques,
+            chunk_texts=chunk_texts,
+            bm25=bm25,
         )
 
     df = pd.DataFrame(

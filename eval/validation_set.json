@@ -118,5 +118,125 @@
     "source": "Incident behavior: Kerberoasting",
     "text": "An attacker with a valid domain user account requests Kerberos service tickets for accounts with registered service principal names, then extracts the tickets to crack the service account passwords offline.",
     "correct_techniques": ["T1558.003"]
+  },
+  {
+    "id": "V21",
+    "source": "CVE-2019-19781 (Citrix ADC/Gateway path traversal)",
+    "text": "An unauthenticated attacker sends a crafted HTTP request containing directory traversal sequences to a Citrix Application Delivery Controller, allowing arbitrary file write and remote code execution on the appliance.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V22",
+    "source": "CVE-2022-26134 (Atlassian Confluence OGNL injection)",
+    "text": "An unauthenticated attacker sends a crafted URL to a public-facing Confluence Server instance, triggering an OGNL expression injection that results in arbitrary command execution on the underlying server.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V23",
+    "source": "CVE-2023-3519 (Citrix ADC/Gateway buffer overflow)",
+    "text": "An unauthenticated attacker sends an oversized request to a Citrix NetScaler ADC/Gateway appliance, triggering a stack buffer overflow that grants remote code execution on the device.",
+    "correct_techniques": ["T1190"]
+  },
+  {
+    "id": "V24",
+    "source": "Incident behavior: Golden Ticket",
+    "text": "Having previously compromised the krbtgt account's password hash, the attacker forges a Kerberos ticket-granting ticket offline, allowing them to impersonate any domain user and access any resource in the domain indefinitely.",
+    "correct_techniques": ["T1558.001"]
+  },
+  {
+    "id": "V25",
+    "source": "Incident behavior: Pass-the-Hash",
+    "text": "The attacker captures an NTLM password hash from a compromised workstation and uses it directly to authenticate to other systems on the network without ever cracking the hash into plaintext.",
+    "correct_techniques": ["T1550.002"]
+  },
+  {
+    "id": "V26",
+    "source": "Incident behavior: Pass-the-Ticket",
+    "text": "The attacker extracts a Kerberos ticket from a compromised machine's memory and replays it on a different host to authenticate as the ticket's original owner without knowing their password.",
+    "correct_techniques": ["T1550.003"]
+  },
+  {
+    "id": "V27",
+    "source": "Incident behavior: DLL side-loading",
+    "text": "The attacker places a malicious DLL with the same filename as a library expected by a legitimate, signed application in that application's directory, so the trusted program loads and executes the attacker's code when it runs.",
+    "correct_techniques": ["T1574.001"]
+  },
+  {
+    "id": "V28",
+    "source": "Incident behavior: cron persistence",
+    "text": "After compromising a Linux server, the attacker adds an entry to the crontab that re-downloads and executes their backdoor every hour, ensuring their access survives process termination or reboot.",
+    "correct_techniques": ["T1053.003"]
+  },
+  {
+    "id": "V29",
+    "source": "Incident behavior: stolen VPN credentials",
+    "text": "The attacker authenticates to the organization's SSL VPN gateway using employee credentials purchased from a criminal marketplace, gaining an initial foothold on the internal network with no exploit or malware required.",
+    "correct_techniques": ["T1133"]
+  },
+  {
+    "id": "V30",
+    "source": "Incident behavior: cloud role assumption abuse",
+    "text": "After compromising a low-privileged cloud service account, the attacker discovers it is permitted to assume a highly privileged IAM role and uses that misconfiguration to obtain administrative control of the cloud environment.",
+    "correct_techniques": ["T1078.004"]
+  },
+  {
+    "id": "V31",
+    "source": "Incident behavior: DNS exfiltration",
+    "text": "The malware encodes stolen files into a series of subdomain labels and sends them as DNS queries to an attacker-controlled name server, exfiltrating the data outside of its normal command-and-control channel.",
+    "correct_techniques": ["T1048.003"]
+  },
+  {
+    "id": "V32",
+    "source": "Incident behavior: ransomware disabling shadow copies",
+    "text": "Before encrypting files, the ransomware runs vssadmin to delete all Volume Shadow Copies on the system, preventing the victim from restoring their files from local backups.",
+    "correct_techniques": ["T1490"]
+  },
+  {
+    "id": "V33",
+    "source": "Incident behavior: clearing Windows event logs",
+    "text": "After completing their objectives, the attacker runs wevtutil to clear the Security and System event logs on the compromised host in an attempt to remove evidence of their activity.",
+    "correct_techniques": ["T1685.005"]
+  },
+  {
+    "id": "V34",
+    "source": "Incident behavior: certutil LOLBin download",
+    "text": "The attacker abuses the built-in certutil.exe utility, passing it a URL flag to download a second-stage payload from an external server, avoiding the need to bring their own download tool.",
+    "correct_techniques": ["T1105"]
+  },
+  {
+    "id": "V35",
+    "source": "Incident behavior: domain computer enumeration",
+    "text": "Using a compromised low-privileged domain account, the attacker queries Active Directory to list every computer object joined to the domain in order to plan lateral movement.",
+    "correct_techniques": ["T1018"]
+  },
+  {
+    "id": "V36",
+    "source": "Incident behavior: business email compromise inbox rule",
+    "text": "After phishing an executive's credentials, the attacker logs into the mailbox and creates a hidden rule that silently forwards all incoming invoices to an external address the attacker controls.",
+    "correct_techniques": ["T1114.003"]
+  },
+  {
+    "id": "V37",
+    "source": "Incident behavior: pre-exfiltration archiving",
+    "text": "Before sending stolen documents out of the network, the attacker compresses them into a single password-protected ZIP archive using a built-in command-line utility to reduce their size and obscure their contents.",
+    "correct_techniques": ["T1560.001"]
+  },
+  {
+    "id": "V38",
+    "source": "Incident behavior: session cookie theft",
+    "text": "Malware running on the victim's browser extracts an active authenticated session cookie for a corporate web application and sends it to the attacker, who imports it into their own browser to access the account without needing a password.",
+    "correct_techniques": ["T1539"]
+  },
+  {
+    "id": "V39",
+    "source": "Incident behavior: PsExec lateral movement",
+    "text": "Using compromised local administrator credentials, the attacker uses PsExec to remotely install and start a Windows service on another host, causing it to execute their payload.",
+    "correct_techniques": ["T1569.002"]
+  },
+  {
+    "id": "V40",
+    "source": "Incident behavior: internal port scanning",
+    "text": "From a freshly compromised host, the attacker runs a scanning tool against the internal network range to identify which other hosts have SMB, RDP, and WinRM ports open before deciding where to move next.",
+    "correct_techniques": ["T1046"]
   }
 ]

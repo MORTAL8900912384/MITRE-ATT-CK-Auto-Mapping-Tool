@@ -28,10 +28,10 @@ def load_validation_set() -> list[dict]:
         return json.load(f)
 
 
-def evaluate() -> dict:
+def evaluate(rerank: bool = False) -> dict:
     examples = load_validation_set()
     model = get_model()
-    embeddings, ids, techniques = load_index()
+    embeddings, ids, techniques, chunk_texts, bm25 = load_index()
 
     per_example = []
     top1_hits = 0
@@ -45,6 +45,9 @@ def evaluate() -> dict:
             embeddings=embeddings,
             ids=ids,
             techniques=techniques,
+            chunk_texts=chunk_texts,
+            bm25=bm25,
+            rerank=rerank,
         )
         predicted_ids = [p["technique_id"] for p in predictions]
         correct = set(ex["correct_techniques"])
