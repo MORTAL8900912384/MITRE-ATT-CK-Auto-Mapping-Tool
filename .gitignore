@@ -2,7 +2,7 @@ venv/
 __pycache__/
 *.pyc
 .streamlit/
-.claude/settings.local.json
+.claude/
 
 # Large raw STIX bundle - regenerate with src/fetch_attack_data.py
 data/enterprise-attack.json
